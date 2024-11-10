@@ -1,0 +1,500 @@
+
+
+.navbar {
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 20px;
+}
+
+.navbar-nav .nav-link {
+  color: #007acc;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #005f99;
+}
+
+.navbar-nav .dropdown-menu {
+  min-width: 200px;
+}
+
+/* Dropdown Menu Item Hover */
+.navbar-nav .dropdown-item:hover {
+  background-color: #007acc;
+  color: white;
+}
+
+.navbar-nav .dropdown-item:focus {
+  background-color: #007acc;
+  color: white;
+}
+
+.navbar-toggler {
+  border-color: #007acc;
+}
+
+
+
+
+.container {
+  max-width: 500px;
+}
+
+.btn-primary {
+  background-color: #007acc;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #005f99;
+}
+
+.modal-header {
+  background-color: #007acc;
+  color: white;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+p a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+
+.modal-header {
+  background-color: #007acc;
+  color: #fff;
+}
+
+.modal-content {
+  border-radius: 8px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+#registerForm {
+  padding: 20px;
+}
+
+.btn-primary {
+  background-color: #007acc;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #005f99;
+}
+
+p a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+.main-background
+{
+	background-color: #a7c4c0;
+	height:80vh;
+}
+
+.top-container
+{
+	text-align: center;
+	color: steelblue;
+
+}
+.top-heading
+{
+	font-size:40px;
+	font-family: "lobster";
+
+}
+.top-para
+{
+	font-size:20px;
+	font-family: "Roboto";
+	color:black;
+
+}
+
+.second-top-para
+{
+	font-size:20px;
+	font-family: "Roboto";
+	color:Black;
+
+}
+
+
+
+h1 {
+  font-size: 2em;
+  color: #333;
+}
+
+h2 {
+  font-size: 3em; /* Larger than h1 */
+  color: #007acc;
+  margin-top: 0;
+  animation: fade 0.2s ease-in-out;
+}
+
+@keyframes fade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.main-pic
+{
+	background-image: url("https://img.freepik.com/premium-photo/aircraft-models-globes-map-travel-concept-elements-this-image-furnished-b_44271-337.jpg?uid=R165781236&ga=GA1.1.576750161.1727607961&semt=ais_hybrid");
+	height: 50vh;
+	background-position: center;
+	padding-top: 10;
+}
+
+.book-heading
+{
+	color:orange;
+	text-align: center;
+	justify-content: center;
+  align-items: center;
+}
+
+.book-image
+{
+	background-image:url("https://img.freepik.com/premium-photo/wanderlust-unleashing-icons-holiday-travel-destinations_983420-355875.jpg?w=996");
+	background-position: center;
+	height:80vh;
+	width: 80vh;
+	padding-top: 10;
+
+}
+
+
+
+.container {
+  display: flex;
+  width: 80%;
+}
+
+
+
+@keyframes fade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.right {
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+  border-left: 2px solid #ccc;
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+form input, form select, form textarea, form button {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form button {
+  background-color: #007acc;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+}
+
+form button:hover {
+  background-color: #005f99;
+}
+
+.book-para
+{
+	color:blue;
+	margin-top: 5;
+
+}
+
+.blue-button
+{
+	color:blue;
+}
+
+
+
+.package-gallery {
+  width: 80%;
+  text-align: center;
+}
+
+.package-gallery h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.package-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.package-card {
+  width: 30%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  background-color: #fff;
+  transition: transform 0.2s;
+}
+
+.package-card:hover {
+  transform: scale(1.05);
+}
+
+.package-card img {
+  width: 100%;
+  height: auto;
+}
+
+.package-card h3 {
+  margin: 10px;
+  font-size: 1.5em;
+}
+
+.package-card p {
+  margin: 10px;
+  color: #555;
+}
+
+.package-card .price, .package-card .rating {
+  font-weight: bold;
+  color: #333;
+  margin: 10px;
+}
+
+.package-card button {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.package-card button:hover {
+  background-color: #005f99;
+}
+
+.services {
+  width: 80%;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.services h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.service-card {
+  width: 30%;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.2s;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+.service-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 1.3em;
+  color: #007acc;
+  margin: 10px 0;
+}
+
+.service-card p {
+  color: #555;
+  font-size: 0.95em;
+  margin: 0;
+}
+
+
+
+.gallery {
+  width: 80%;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.gallery h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  min-width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.slide:hover img {
+  transform: scale(1.1);
+}
+
+
+.about-us {
+  display: flex;
+  width: 80%;
+  padding: 40px 0;
+  gap: 20px;
+  align-items: center;
+}
+
+.about-image, .about-info {
+  width: 50%;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.about-info {
+  padding: 0 20px;
+  text-align: left;
+}
+
+.about-info h2 {
+  font-size: 2em;
+  color: #007acc;
+  margin-bottom: 10px;
+}
+
+.about-info p {
+  color: #555;
+  font-size: 1em;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer-content h3 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.social-icons {
+  margin: 10px 0;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.5em;
+  margin: 0 10px;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #007acc;
+}
+
+.footer-content p {
+  font-size: 0.9em;
+  margin: 5px 0 0;
+  color: #aaa;
+} 
+
+

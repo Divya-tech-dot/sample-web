@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Divya's Infinite Tours and Travells.</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+	<link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+        <img src="https://img.freepik.com/free-photo/full-shot-travel-concept-with-landmarks_23-2149153258.jpg?t=st=1731246388~exp=1731249988~hmac=183c89cb54910597353c70baaf68174a7411ec4fc2bf5bad6c3c0345d39cbc2b&w=1060" alt="Logo" class="d-inline-block align-text-top" style="width: 40px; height: 40px;">
+        Divya's Infinite Tours And Travells
+      </a>
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Book</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Packages
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">United States</a></li>
+              <li><a class="dropdown-item" href="#">India</a></li>
+              <li><a class="dropdown-item" href="#">France</a></li>
+              <li><a class="dropdown-item" href="#">Germany</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <span class="navbar-text">
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+
+      <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm" onsubmit="return validateLoginForm()">
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+            <p class="mt-2"><a href="register.html">Don't have an account? Register here</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registerModalLabel">Register</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="registerForm" onsubmit="return validateForm()">
+            <div class="mb-3">
+              <label for="fullname" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="fullname" required>
+            </div>
+            <div class="mb-3">
+              <label for="contact" class="form-label">Contact</label>
+              <input type="tel" class="form-control" id="contact" required>
+            </div>
+            <div class="mb-3">
+              <label for="dob" class="form-label">Date of Birth</label>
+              <input type="date" class="form-control" id="dob" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" required>
+            </div>
+            <div class="mb-3">
+              <label for="gender" class="form-label">Gender</label>
+              <select class="form-select" id="gender" required>
+                <option value="" disabled selected>Select your gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+            <p class="mt-2"><a href="login.html">Already have an account? Login here</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+    </span>
+  </div>
+</nav>
+
+<div class= "main-background">
+ <div class="row">
+   <div class="col-md-6">
+    <h1 class="display-4 top-container top-heading pt-5">Welcome to Infinite Tours and Travels</h1>
+    <p class="lead top-para text-center">Visit place.</p>
+    <p class="lead second-top-para text-center">Create memories with Infinite Tours and Travels</p>
+    <hr class="my-4">
+
+
+
+    <h1 class= text-center>Visit</h1>
+  <h2 id="place"class= text-center>USA</h2>
+
+  <script class= text-center>
+    const places = ["USA", "France", "India", "Italy", "Germany", "Canada"];
+    let index = 0;
+
+    setInterval(() => {
+      document.getElementById("place").innerText = places[index];
+      index = (index + 1) % places.length;
+    }, 200);
+  </script>
+  
+    <a cla class= "btn btn-danger btn-lg text-center" href="#" role="button"> <i class="bi bi-"></i>Book Now</a>
+   </div>
+   <div class="col-md-6 main-pic mt-5"> 
+       
+   </div>
+ </div>
+</div>
+
+<div class= "container">
+  <div class= "row">
+    <div class= "col-md-12 book-heading">
+      <h1 class= "book-heading mt-4 text-center">Book</h1>
+    </div>
+  </div>
+  <div class= "row">
+    <div class= "col-md-6">
+      <div class= "book-image mt-3">
+      </div>
+    </div>
+
+
+
+
+    <div class= "col-6 mt-4">
+      
+      <div class="container">
+    <div class="right">
+      <form id="bookingForm">
+        <label for="whereTo">Where to:</label>
+        <select id="whereTo" required>
+          <option value="">Select a place</option>
+          <option value="Paris">Paris</option>
+          <option value="London">London</option>
+          <option value="Tokyo">Tokyo</option>
+          <option value="Sydney">Sydney</option>
+          <option value="New York">New York</option>
+        </select>
+
+        <label for="persons">How Many Persons:</label>
+        <input type="number" id="persons" min="1" required>
+
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" required>
+
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" required>
+
+        <label for="description">Description:</label>
+        <textarea id="description" minlength="50" maxlength="500" required></textarea>
+
+        <button type="submit">Book Now</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const places = ["USA", "France", "Japan", "Italy", "Brazil", "Canada"];
+    let index = 0;
+    setInterval(() => {
+      document.getElementById("place").innerText = places[index];
+      index = (index + 1) % places.length;
+    }, 200);
+
+    document.getElementById("bookingForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      
+      const startDate = new Date(document.getElementById("startDate").value);
+      const endDate = new Date(document.getElementById("endDate").value);
+      const description = document.getElementById("description").value;
+
+      if (endDate <= startDate) {
+        alert("End Date must be after Start Date.");
+      } else if (description.length < 50 || description.length > 500) {
+        alert("Description must be between 50 and 500 characters.");
+      } else {
+        alert("Booking successful!");
+      }
+    });
+  </script>
+</div>
+
+
+
+
+
+    <h2 class= "pt-5">Package Gallery</h2>
+    <div class="package-row">
+      <div class="package-card">
+        <img src="https://img.freepik.com/premium-photo/taj-mahal-is-monument-india_865967-16780.jpg?w=996" alt="Taj Mahal">
+        <h3>Taj Mahal, India</h3>
+        <p>Experience the beauty of one of the world's wonders with rich history and stunning architecture.</p>
+        <p class="price">Price: $1200</p>
+        <p class="rating">Rating: 4.8 ⭐</p>
+        <button>Book Now</button>
+      </div>
+      <div class="package-card">
+        <img src="https://img.freepik.com/free-photo/view-famous-eiffel-tower-with-blue-sky-paris_268835-829.jpg?t=st=1731238006~exp=1731241606~hmac=da2ccacf3efda0b4f1bd4609cfb555303db960e6b73f94d7868ccdd61b169fb1&w=360" alt="Eiffel Tower">
+        <h3>Eiffel Tower, France</h3>
+        <p>Enjoy the charm of Paris and the iconic Eiffel Tower with breathtaking views and culture.</p>
+        <p class="price">Price: $1500</p>
+        <p class="rating">Rating: 4.9 ⭐</p>
+        <button>Book Now</button>
+      </div>
+      <div class="package-card">
+        <img src="https://img.freepik.com/free-photo/beautiful-shot-sydney-harbor-bridge-with-light-pink-blue-sky_181624-16041.jpg?t=st=1731238170~exp=1731241770~hmac=1a12b2e876028faf41b10beed5d26a2a8508fc9c99773126ee89a68919804088&w=996" alt="Sydney Opera House">
+        <h3>Sydney Opera House, Australia</h3>
+        <p>Discover the beauty of Sydney with its iconic Opera House and stunning harbor.</p>
+        <p class="price">Price: $1400</p>
+        <p class="rating">Rating: 4.7 ⭐</p>
+        <button>Book Now</button>
+      </div>
+    </div>
+
+
+
+<div class="package-row">
+      <div class="package-card">
+        <img src="https://img.freepik.com/free-photo/views-entrance-indian-temple_119635-5.jpg?t=st=1731238490~exp=1731242090~hmac=35974c3a133da0d247fd5d55d6867a2b58a3ec1da8f822fc41437a9e44cdd6ea&w=996" alt="Taj Mahal">
+        <h3>Another Taj Mahal Package</h3>
+        <p>Relive the mesmerizing beauty and explore new tours around the Taj Mahal.</p>
+        <p class="price">Price: $1100</p>
+        <p class="rating">Rating: 4.6 ⭐</p>
+        <button>Book Now</button>
+      </div>
+      <div class="package-card">
+        <img src="https://img.freepik.com/premium-photo/chic-bedroom-with-stunning-view-eiffel-tower_982322-78330.jpg?w=740" alt="Eiffel Tower">
+        <h3>Paris Deluxe Tour</h3>
+        <p>Experience an exclusive tour of Paris with access to iconic sites and special events.</p>
+        <p class="price">Price: $1600</p>
+        <p class="rating">Rating: 5.0 ⭐</p>
+        <button>Book Now</button>
+      </div>
+      <div class="package-card">
+        <img src="https://img.freepik.com/free-photo/eye-level-shot-stones-beach-trees-buildings-blue-cloudy-sky_181624-31710.jpg?t=st=1731238626~exp=1731242226~hmac=edaf69d30019c90afaf916de65a695764aaf4fcbcded496843cd363bed9cf93a&w=996" alt="Sydney Opera House">
+        <h3>Sydney Ultimate</h3>
+        <p>Join us for an unforgettable tour around Sydney’s vibrant scenes and beaches.</p>
+        <p class="price">Price: $1350</p>
+        <p class="rating">Rating: 4.5 ⭐</p>
+        <button>Book Now</button>
+      </div>
+    </div>
+
+    <div class="package-row">
+      <div class="package-card">
+        <img src="https://img.freepik.com/free-photo/ramadan-kareem-eid-mubarak-free-photo-mosque-lamp-evening_1340-23518.jpg?t=st=1731238712~exp=1731242312~hmac=2b3eeb700dea37e2d63db20491bbf4e8344c383cd0d856bc086dfdb97fbde00b&w=996" alt="Taj Mahal">
+        <h3>Taj by Night</h3>
+        <p>See the Taj Mahal under the moonlight with a unique nighttime experience.</p>
+        <p class="price">Price: $1300</p>
+        <p class="rating">Rating: 4.9 ⭐</p>
+        <button>Book Now</button>
+      </div>
+      <div class="package-card">
+        <img src="https://img.freepik.com/free-photo/women-traveling-paris_23-2149305859.jpg?t=st=1731238789~exp=1731242389~hmac=48b89accff749005c4ae8f77133332265fdc1a6960a2ccac75262c7e8b677088&w=996" alt="Eiffel Tower">
+        <h3>Paris Romance Tour</h3>
+        <p>A romantic getaway in Paris with special couple events and sites.</p>
+        <p class="price">Price: $1550</p>
+        <p class="rating">Rating: 4.8 ⭐</p>
+        <button>Book Now</button>
+      </div>
+      <div class="package-card">
+        <img src="https://img.freepik.com/free-photo/expro-bridge-night-daejeon-korea_335224-406.jpg?t=st=1731239065~exp=1731242665~hmac=af2fb644b47ab8f08528acc80a411cc0eefb6e46f752f0a867434eabfff3330a&w=996" alt="Sydney Opera House">
+        <h3>Opera Experience</h3>
+        <p>Exclusive tickets to performances at the Opera House with city tours.</p>
+        <p class="price">Price: $1450</p>
+        <p class="rating">Rating: 4.7 ⭐</p>
+        <button>Book Now</button>
+      </div>
+    </div>
+  
+
+<div>
+<h1 class= "pt-5">Our Services</h1>
+    <div class="service-cards">
+      <div class="service-card">
+        <img src="https://img.freepik.com/premium-photo/check-hotel-receptionist-counter-hotel-wearing-medical-masks-as-precaution-against-virus-young-woman-business-trip-doing-check-hotel_109285-8411.jpg?w=996" alt="Affordable Hotel">
+        <h3>Affordable Hotel</h3>
+        <p>Book budget-friendly hotels with the best facilities to ensure a comfortable stay.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://img.freepik.com/free-photo/mini-burgers-french-fries-spices-cocktails-side-view_141793-1814.jpg?t=st=1731240148~exp=1731243748~hmac=9fe9ec0082229cf8a2d9b35e5489c860b70ded32fbafd2fc36cf41813a0ccd18&w=996" alt="Food & Drinks">
+        <h3>Food & Drinks</h3>
+        <p>Enjoy a variety of delicious cuisines and beverages at top-rated restaurants.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://img.freepik.com/premium-photo/beautiful-caucasian-tourist-woman-looking-map-street-city_114963-4612.jpg?w=996" alt="Safety Guide">
+        <h3>Safety Guide</h3>
+        <p>Travel with peace of mind with our expert safety guidance and tips.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://img.freepik.com/free-photo/top-view-hand-holding-notebook_23-2149617649.jpg?t=st=1731240382~exp=1731243982~hmac=d300c620d50758a4f060c27f82f9df5c76e58cb152f4b8ba7bc87c43636ec0b9&w=996" alt="Travel Assistance">
+        <h3>Travel Assistance</h3>
+        <p>Get assistance for planning your itinerary and navigating destinations.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://img.freepik.com/free-photo/cheerful-indian-candidate-happy-get-job_1262-17246.jpg?t=st=1731240444~exp=1731244044~hmac=f6958367493053e345f498d66618475589b824fa193e9fa577ea1b88802552a9&w=996" alt="Luggage Service">
+        <h3>Luggage Service</h3>
+        <p>Leave your luggage worries behind with our convenient luggage service.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://img.freepik.com/free-photo/thoughtful-tourists-with-map_23-2147654308.jpg?t=st=1731240488~exp=1731244088~hmac=3512f80428d3623b24d5e5e1c28fffeb692d3ef42206d1be6a3efc77ed67c2ff&w=996" alt="Local Guide">
+        <h3>Local Guide</h3>
+        <p>Explore like a local with our knowledgeable guides who know the city best.</p>
+      </div>
+    </div>
+  </div>
+  
+
+
+    <h2 class= "text-center pt-5">Our Gallery</h2>
+    <div class="slider">
+      <div class="slide">
+        <img src="https://img.freepik.com/premium-photo/people-smiling-front-taj-mahal-india_910608-11354.jpg?ga=GA1.1.576750161.1727607961&semt=ais_hybrid" alt="Taj Mahal">
+      </div>
+      <div class="slide">
+        <img src="https://img.freepik.com/premium-photo/rear-view-woman-standing-against-sky_1048944-27324271.jpg?w=996" alt="Eiffel Tower">
+      </div>
+      <div class="slide">
+        <img src="https://img.freepik.com/premium-photo/young-woman-traveling-with-hat-sunset-happy-asian-traveler-visit-singapore-city-downtown-landmark-popular-tourist-attractions-asia-travel-concept_42256-1434.jpg?w=996" alt="Sydney Opera House">
+      </div>
+      <div class="slide">
+        <img src="https://img.freepik.com/free-photo/two-female-friends-walking-along-great-wall-china-near-beijing-entarnce_1157-29848.jpg?t=st=1731241883~exp=1731245483~hmac=03a5151b77293558de2473c98bdf9f7c555a6d69a57b48d4930c1db403aa0709&w=996" alt="Great Wall of China">
+      </div>
+      <div class="slide">
+        <img src="https://img.freepik.com/premium-photo/new-york-usa-april-22-2017-statue-liberty-tourist-selfie-with-smartphone_850000-41132.jpg?w=360" alt="Statue of liberty">
+      </div>
+      <div class="slide">
+        <img src="https://img.freepik.com/premium-photo/tourist-couple-great-sphinx-giza-background-pyramids-giza_242111-17445.jpg?w=360" alt="Pyramids of Egypt">
+      </div>
+    </div>
+  
+
+
+
+<section class="about-us">
+    <div class="about-image">
+      <img src="https://img.freepik.com/free-photo/full-shot-travel-concept-with-landmarks_23-2149153258.jpg?t=st=1731242914~exp=1731246514~hmac=9b2cd38bdfb772ab513a7e75d33bf52799c901c1a2e8f2ff691b0040e0fc67db&w=1060" alt="Company Image">
+    </div>
+    <div class="about-info">
+      <h2>About Us</h2>
+      <p><strong>Established:</strong> 31-10-2024</p>
+      <p><strong>Company Overview:</strong> Divya's Infinite Tours and Travels is dedicated to providing unforgettable travel experiences worldwide. We specialize in creating personalized tours and travel packages tailored to meet the needs and interests of our clients.</p>
+      <p><strong>Our Mission:</strong> To make travel accessible, enjoyable, and memorable by offering top-notch services, from affordable accommodations to guided tours across stunning destinations.</p>
+      <p><strong>Why Choose Us?</strong> We prioritize safety, comfort, and customer satisfaction, ensuring that every journey with us is smooth and fulfilling.</p>
+    </div>
+  </section>
+
+
+<footer class="footer">
+    <div class="footer-content">
+      <h3>Divya's Infinite Tours and Travels</h3>
+      <div class="social-icons">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <p>&copy; 2024 Divya's Infinite Tours and Travels. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+            
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>
